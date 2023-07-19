@@ -17,6 +17,7 @@ return new class extends Migration
             $table->bigInteger('category_id');
             $table->string('title', 60);
             $table->text('contents');
+            $table->softDeletes();
 
             $table->foreign('category_id')
                 ->references('id')
